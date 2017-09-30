@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="./leaner-search.js"></script>
+    <script src="./binary-search.js"></script>
+    <script src="./selection-sort.js"></script>
+    <script src="./bubble-sort.js"></script>
+    <script src="./insertion-sort.js"></script>
+    <script src="./merge-sort.js"></script>
+    <script src="./quick-sort.js"></script>
+    <script src="./quick-sort-object.js"></script>
+
+    <script>
+        let leanerSearch = new LeanerSearch();
+        let binarySearch = new BinarySearch();
+        let selectionSort = new SelectionSort();
+        let bubbleSort = new BubbleSort();
+        let insertionSort = new InsertionSort();
+        let mergeSort = new MergeSort();
+        let quickSort = new QuickSort();
+        let quickSortObject = new QuickSortObject();
+
+        doQuickSortObject = () => {
+            let arr = [{
+                'id': 38,
+                'name': 'harender'
+            }, {
+                'id': 98,
+                'name': 'mango'
+            }, {
+                'id': 48,
+                'name': 'vipin'
+            }, {
+                'id': 98,
+                'name': 'zapple0'
+            }, {
+                'id': 58,
+                'name': 'nitin'
+            }, {
+                'id': 100,
+                'name': 'banana'
+            }, {
+                'id': 28,
+                'name': 'abf'
+            }, {
+                'id': 18,
+                'name': 'abx'
+            }, {
+                'id': 8,
+                'name': 'a'
+            }, {
+                'id': 98,
+                'name': 'ab'
+            }, {
+                'id': 8,
+                'name': 'abc'
+            }];
+            let x = quickSortObject.qs(arr, 'name', 0, arr.length - 1);
+            console.log(x);
+        }
+
+        doQuickSort = () => {
+            let arr = [30, 25, 15, 18, 20, 17];
+            let x = quickSort.quickSort(arr, 0, arr.length - 1);
+            console.log(x);
+        }
+
+        doMergeSort = () => {
+            let arr = [30, 25, 65, 22, 11, 2, 32, 12, 32, 16, 8, 10, 15, 18, 20, 17];
+            let x = mergeSort.mergeSort(arr, 0, arr.length - 1);
+            console.log(x);
+        }
+
+        doInsertionSort = () => {
+            let arr = [30, 25, 16, 8, 10, 15, 18, 20, 17];
+            let x = insertionSort.is(arr);
+            console.log(x);
+        }
+
+        doBubbleSort = () => {
+            let arr = [2, 25, 16, 8, 10, 15, 18, 20, 17];
+            let x = bubbleSort.bs(arr);
+            console.log(x);
+        }
+
+        doSelectionSort = () => {
+            let arr = [2, 25, 16, 8, 10, 15, 18, 20];
+            let x = selectionSort.selectionSort(arr);
+            console.log(x);
+        }
+
+        doBinarySearch = () => {
+            let arr = [2, 5, 6, 8, 10, 15, 18, 20];
+            let x = binarySearch.bs(arr, 0, arr.length - 1, 6);
+            console.log(x);
+        }
+    </script>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Search Algo</th>
+        </tr>
+        <tr>
+            <th>Search Item in ablove array</th>
+        </tr>
+        <tr>
+            <td><input type="button" value="Leaner Search"></td>
+            <td><input type="button" value="Biary Search" onclick="doBinarySearch()"></td>
+            <td><input type="button" value="Selection Sort" onclick="doSelectionSort()"></td>
+            <td><input type="button" value="Bubble Sort" onclick="doBubbleSort()"></td>
+            <td><input type="button" value="Insertion Sort" onclick="doInsertionSort()"></td>
+            <td><input type="button" value="Merge Sort" onclick="doMergeSort()"></td>
+            <td><input type="button" value="Quick Sort" onclick="doQuickSort()"></td>
+            <td><input type="button" value="Quick Sort Object" onclick="doQuickSortObject()"></td>
+        </tr>
+
+    </table>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+
+</body>
+
+</html>

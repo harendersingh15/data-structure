@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./stack.js"></script>
+    <script src="./queue.js"></script>
+    <script src="./linked-list.js"></script>
+    <script src="./tree.js"></script>
+    <script src="./double-linked-list.js"></script>
+    <script src="./graph.js"></script>
+    <script src="./algo/leaner-search.js"></script>
+    <script>
+        let leanerSearch = new LeanerSearch();
+
+
+        console.log(leanerSearch.search(5));
+
+        let graph = new Graph();
+        graph.addVertex(1);
+        graph.addVertex(2);
+        graph.addVertex(3);
+        graph.addVertex(4);
+        graph.addVertex(5);
+        graph.addVertex(6);
+        graph.print();
+        graph.addEdge(1, 2);
+        graph.addEdge(1, 5);
+        graph.addEdge(2, 3);
+        graph.addEdge(2, 5);
+        graph.addEdge(3, 4);
+        graph.addEdge(4, 5);
+        graph.addEdge(4, 6);
+        console.log('Size of graph ' + graph.size());
+        console.log('Relation of graph ' + graph.relation());
+        //  graph.print();
+
+        // graph.removeVertex(2);
+        //  graph.print();
+        //graph.traverseDFS(5, (vertex) => console.log(vertex));
+        //console.log(graph);
+
+        // let tree = new Tree('one');
+        // //  console.log(tree._root);
+
+        // tree.add('two', 'one', tree.traverseBFS);
+        // tree.add('three', 'one', tree.traverseBFS);
+        // tree.add('four', 'one', tree.traverseBFS);
+        // tree.add('five', 'three', tree.traverseBFS);
+        // tree.add('six', 'four', tree.traverseBFS);
+
+        var tree = new Tree('CEO');
+
+        tree.add('VP of Happiness', 'CEO', tree.traverseBFS);
+        tree.add('VP of Finance', 'CEO', tree.traverseBFS);
+        tree.add('VP of Sadness', 'CEO', tree.traverseBFS);
+
+        tree.add('Director of Puppies', 'VP of Finance', tree.traverseBFS);
+        tree.add('Manager of Puppies', 'Director of Puppies', tree.traverseBFS);
+
+        // tree._root.children.push(new TreeNode('two'));
+        // tree._root.children[0].parent = tree;
+
+        // tree._root.children.push(new TreeNode('three'));
+        // tree._root.children[1].parent = tree;
+
+        // tree._root.children.push(new TreeNode('four'));
+        // tree._root.children[2].parent = tree;
+
+        // tree._root.children[0].children.push(new TreeNode('five'));
+        // tree._root.children[0].children[0].parent = tree._root.children[0];
+
+        // tree._root.children[0].children.push(new TreeNode('six'));
+        // tree._root.children[0].children[1].parent = tree._root.children[0];
+
+        // tree._root.children[2].children.push(new TreeNode('seven'));
+        // tree._root.children[2].children[0].parent = tree._root.children[2];
+
+        //tree.traverseDFS((node) => console.log(node.data));
+        //debugger;
+        console.log('-------------------------------')
+            //        tree.traverseBFS((node) => console.log(node.data));
+        console.log('-------------------------------')
+            // tree.contain((node) => {
+            //     if (node.data == 'two') {
+            //         console.log(node.data);
+            //     }
+            // }, tree.traverseBFS);
+            //      console.log(tree);
+        let dll = new DoubleLinkedList();
+
+        dll.addFirst(10);
+        dll.addFirst(20);
+        dll.addFirst(30);
+        //    console.log(dll);
+        dll.addLast(40);
+        // console.log(dll.displayAll());
+
+        let linkedList = new LinkedList();
+        linkedList.addFirst(20);
+        linkedList.addFirst(30);
+        linkedList.addFirst(40);
+
+        //  console.log('display at ' + linkedList.displayAt(1));
+        linkedList.addAt(50, 1);
+        //console.log(linkedList.displayAll());
+
+        linkedList.removeFirst();
+        //console.log(linkedList);
+        linkedList.removeAt(1);
+
+        let s = new Stack();
+        s.push('harender');
+        s.push('nitin');
+        s.push('vipin');
+        //        console.log(s.displayAll());
+
+        let queue = new Queue();
+        queue.enqueue('one');
+        queue.enqueue('two');
+        //      console.log(queue);
+        //    console.log(queue.displayAll());
+    </script>
+
+</head>
+
+<body>
+
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+
+</body>
+
+</html>

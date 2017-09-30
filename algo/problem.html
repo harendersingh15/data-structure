@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="./practice.js"></script>
+    <script>
+        let problems = new Problems();
+
+        getMissingNumber = () => {
+            let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, , 19, 20, 21, 22];
+            let missingItem = problems.getMissingNumber(array);
+            console.log(missingItem);
+        }
+
+        doPivotedBinarySearch = () => {
+            let array = [3, 4, 5, 35, 45, 67, 78, 99, 100, 1, 2];
+            let Itemindex = problems.getPivotedBinarySearch(array, 100);
+            console.log(Itemindex);
+        }
+    </script>
+
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Search Algo</th>
+        </tr>
+        <tr>
+            <th>Search Item in ablove array</th>
+        </tr>
+        <tr>
+            <td><input type="button" value="Find Missing Number" onclick="getMissingNumber()"></td>
+            <td><input type="button" value="Do Pivoted Sorted Binary Search" onclick="doPivotedBinarySearch()"></td>
+        </tr>
+
+    </table>
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+
+</body>
+
+</html>
